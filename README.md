@@ -19,9 +19,9 @@ Proyek ini dibuat sebagai bagian dari proses seleksi **Frontend Internship di Mi
 | Kategori           | Teknologi                                                                   |
 | ------------------ | --------------------------------------------------------------------------- |
 | Frontend Framework | React / Next.js *(sesuaikan dengan project kamu)*                           |
-| Styling            | Tailwind CSS / CSS Modules / Styled Components                              |
-| HTTP Client        | Axios / Fetch API                                                           |
-| State Management   | React Hooks / Context API                                                   |
+| Styling            | Tailwind CSS                   |
+| HTTP Client        |  Fetch API                                                           |
+| State Management   | React Hooks                                                  |
 | API                | [API Sekolah Indonesia](https://github.com/wanrabbae/api-sekolah-indonesia) |
 
 ---
@@ -46,7 +46,7 @@ npm run dev
 yarn dev
 ```
 
-Aplikasi akan berjalan di `http://localhost:3000/` (default).
+Aplikasi akan berjalan di `http://localhost:5173/` (default).
 
 ---
 
@@ -112,5 +112,6 @@ Proyek ini dibuat untuk tujuan **tes kemampuan frontend**, meliputi:
 
 **Radjikin Septiawan**
 Frontend Developer — kandidat internship di **Minilemon**
-📧 Email: [tambahkan email kamu]
+
+📧 Email: radjikinseptiawan@gmail.com
 🔗 GitHub: [https://github.com/radjikinseptiawan](https://github.com/radjikinseptiawan)
