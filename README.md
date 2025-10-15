@@ -1,73 +1,116 @@
-# React + TypeScript + Vite
+# 🧑‍💻 Minilemon Frontend Internship Test
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Proyek ini dibuat sebagai bagian dari proses seleksi **Frontend Internship di Minilemon**. Aplikasi ini menampilkan data sekolah di Indonesia menggunakan **[API Sekolah Indonesia](https://github.com/wanrabbae/api-sekolah-indonesia)**, dengan fokus pada implementasi antarmuka yang responsif, bersih, dan mudah digunakan.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Fitur Utama
 
-## React Compiler
+* 🔍 **Pencarian Sekolah** berdasarkan provinsi, kabupaten/kota, atau nama sekolah
+* 🏫 **Menampilkan Detail Sekolah** seperti nama, NPSN, status (negeri/swasta), dan alamat
+* 📱 **Desain Responsif** — tampil optimal di desktop maupun perangkat mobile
+* ⚡ **Data Real-time** diambil langsung dari API publik `api-sekolah-indonesia`
+* 💡 **Clean UI & UX** dengan komponen reusable dan struktur code yang terorganisir
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧠 Teknologi yang Digunakan
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+| Kategori           | Teknologi                                                                   |
+| ------------------ | --------------------------------------------------------------------------- |
+| Frontend Framework | React / Next.js *(sesuaikan dengan project kamu)*                           |
+| Styling            | Tailwind CSS / CSS Modules / Styled Components                              |
+| HTTP Client        | Axios / Fetch API                                                           |
+| State Management   | React Hooks / Context API                                                   |
+| API                | [API Sekolah Indonesia](https://github.com/wanrabbae/api-sekolah-indonesia) |
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚙️ Cara Menjalankan Proyek
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+# 1. Clone repository
+git clone https://github.com/radjikinseptiawan/minilemon-internship-requirment.git
+
+# 2. Masuk ke folder project
+cd minilemon-internship-requirment
+
+# 3. Install dependencies
+npm install
+# atau
+yarn install
+
+# 4. Jalankan aplikasi
+npm run dev
+# atau
+yarn dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Aplikasi akan berjalan di `http://localhost:3000/` (default).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 📡 API Endpoint
+
+Proyek ini menggunakan **API Sekolah Indonesia**, yang menyediakan data sekolah dari seluruh Indonesia.
+
+Contoh endpoint:
+
+```bash
+GET https://api-sekolah-indonesia.vercel.app/sekolah?provinsi=JAWA%20BARAT
 ```
+
+Respon contoh:
+
+```json
+{
+  "status": true,
+  "total": 100,
+  "data": [
+    {
+      "npsn": "20202020",
+      "nama": "SMA Negeri 1 Bandung",
+      "status": "Negeri",
+      "alamat": "Jl. Asia Afrika No.1, Bandung"
+    }
+  ]
+}
+```
+
+---
+
+## 🧩 Struktur Folder (Contoh)
+
+```
+minilemon-internship-requirment/
+├── src/
+│   ├── components/      # Reusable components
+│   ├── pages/           # Halaman utama
+│   ├── hooks/           # Custom React hooks
+│   ├── services/        # API calls
+│   ├── styles/          # File CSS/Tailwind
+│   └── utils/           # Helper functions
+├── public/
+│   └── assets/          # Gambar, ikon, dll
+└── package.json
+```
+
+---
+
+## 💬 Catatan
+
+Proyek ini dibuat untuk tujuan **tes kemampuan frontend**, meliputi:
+
+* Pemahaman dasar React dan pengelolaan state
+* Integrasi dengan API publik
+* Pembuatan tampilan yang konsisten dan responsif
+* Penulisan kode yang bersih dan mudah dibaca
+
+---
+
+## 👨‍💼 Author
+
+**Radjikin Septiawan**
+Frontend Developer — kandidat internship di **Minilemon**
+📧 Email: [tambahkan email kamu]
+🔗 GitHub: [https://github.com/radjikinseptiawan](https://github.com/radjikinseptiawan)
